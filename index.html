@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meways</title>
+
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+
+</head>
+<body>
+
+    
+
+    <nav class="d-lg-block d-none">
+        <div class="container-fluid header_wrapper">
+            <div class="row">
+
+                <div class="col-6">
+                    <div class="section_1">
+
+                        <div class="header_logo" onclick="toggleTheme()">
+                            <img src="assets/images/Logo.png" alt="Logo" class="img-fluid">
+                        </div>
+
+                        <button class="header_notifications">
+                            <img src="assets/images/Burger.svg" alt="Menu">
+                        </button>
+
+                        <div class="search_wrapper">
+                            <input type="text" placeholder="Search creators..." />
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="section_2">
+
+                        <button class="btn header_button" data-bs-toggle="modal" data-bs-target="#Sign_in_Modal">Create</button>
+
+                        <div class="header_notifications">
+                            <img src="assets/images/bell.svg" alt="Notifications">
+                        </div>
+
+                        <div class="header_notifications">
+                            <img src="assets/images/message.svg" alt="Message">
+                        </div>
+
+                        <div class="header_avatar">
+                            <img src="assets/images/Avatar.png" alt="Avatar">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+
+    <nav class="d-lg-none d-md-block d-sm-block d-block">
+        <div class="container-fluid header_wrapper">
+            <div class="row">
+
+                <div class="col-3">
+                    <div class="section_1">
+
+                        <div class="header_logo" onclick="toggleTheme()">
+                            <img src="assets/images/Logo.png" alt="Logo" class="img-fluid">
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="col-9">
+                    <div class="section_2">
+
+                        <div class="header_notifications">
+                            <img src="assets/images/bell.svg" alt="Notifications">
+                        </div>
+
+                        <div class="header_notifications">
+                            <img src="assets/images/message.svg" alt="Message">
+                        </div>
+
+                        <div class="header_avatar">
+                            <img src="assets/images/Avatar.png" alt="Avatar">
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <div class="modal fade" id="Sign_in_Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-hidden="true">
+
+        <button type="button" class="modal_close_btn position-fixed" data-bs-dismiss="modal" aria-label="Close">
+            
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z" fill="#FDFDFD"/>
+                <path d="M29.6567 18.6582L18.343 29.9719" stroke="#727272" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M18.3433 18.6582L29.657 29.9719" stroke="#727272" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+
+        </button>
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="login-form">
+
+                        <form name="Sign_in_form" class="needs-validation" novalidate="">
+
+                            <div class="modal_heading text-center">
+                                <h4>Sign in to Core 2.0</h4>
+                            </div>
+
+                            <a href="#" class="google_heading">
+                                <img src="assets/images/google icon.svg" alt="Google Icon" class="img-fluid">
+                                <h4>Sign in with Google</h4>
+                            </a>
+
+                            <div class="email_heading">
+                                <h6>Or sign in with email</h6>
+                            </div>
+
+                            <div class="form-floating">
+                                <input id="valid_field_signin_email" name="login_email" type="email" class="input_fields" placeholder="designer@example.com" required="">
+                                <label>Email</label>
+                                <span id="valid_icon_signin_email" class="valid_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 8.99935L5.19608 12.3327L13 1.66602" stroke="#00A656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                            </div>
+
+                            <div class="form-floating">
+                                <input id="valid_field_signin_password" name="login_password" type="password" class="input_fields" placeholder="........" required="">
+                                <label>Password</label>
+                                <a href="#" class="forget_text" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#forget_Modal">Forget password?</a>
+                                <span id="valid_icon_signin_password" class="valid_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 8.99935L5.19608 12.3327L13 1.66602" stroke="#00A656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                            </div>
+
+                            <button class="btn Submit_Button" type="submit">Sign In</button>
+
+                            <div class="account_create text-center">
+                                <span>Need an account?</span>
+                                <a href="#" data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#Sign_up_Modal">Sign up</a>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="modal fade" id="Sign_up_Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-hidden="true">
+
+        <button type="button" class="modal_close_btn position-fixed" data-bs-dismiss="modal" aria-label="Close">
+            
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z" fill="#FDFDFD"/>
+                <path d="M29.6567 18.6582L18.343 29.9719" stroke="#727272" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M18.3433 18.6582L29.657 29.9719" stroke="#727272" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+
+        </button>
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="login-form">
+
+                        <form name="Sign_up_form" class="needs-validation" novalidate="">
+
+                            <div class="modal_heading text-center">
+                                <h4>Create an account</h4>
+                            </div>
+
+                            <a href="#" class="google_heading">
+                                <img src="assets/images/google icon.svg" alt="Google Icon" class="img-fluid">
+                                <h4>Sign in with Google</h4>
+                            </a>
+
+                            <div class="email_heading">
+                                <h6>Or use your email</h6>
+                            </div>
+
+                            <div class="form-floating">
+                                <input id="valid_field_signup_email" name="login_email" type="email" class="input_fields" placeholder="designer@example.com" required="">
+                                <label>Email</label>
+                                <span id="valid_icon_signup_email" class="valid_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 8.99935L5.19608 12.3327L13 1.66602" stroke="#00A656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                            </div>
+
+                            <div class="form-floating">
+                                <input id="valid_field_signup_password" name="login_password" type="password" class="input_fields" placeholder="........" required="">
+                                <label>Password</label>
+                                <span id="valid_icon_signup_password" class="valid_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 8.99935L5.19608 12.3327L13 1.66602" stroke="#00A656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                            </div>
+
+                            <button class="btn Submit_Button" type="submit">Create an account</button>
+
+                            <div class="account_create text-center">
+                                <span>Already have an account?</span>
+                                <a href="#"data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#Sign_in_Modal">Sign in</a>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="modal fade" id="forget_Modal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-hidden="true">
+
+        <button type="button" class="modal_close_btn position-fixed" data-bs-dismiss="modal" aria-label="Close">
+            
+            <svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M0 24C0 10.7452 10.7452 0 24 0C37.2548 0 48 10.7452 48 24C48 37.2548 37.2548 48 24 48C10.7452 48 0 37.2548 0 24Z" fill="#FDFDFD"/>
+                <path d="M29.6567 18.6582L18.343 29.9719" stroke="#727272" stroke-width="1.5" stroke-linecap="round"/>
+                <path d="M18.3433 18.6582L29.657 29.9719" stroke="#727272" stroke-width="1.5" stroke-linecap="round"/>
+            </svg>
+
+        </button>
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <div class="login-form">
+
+                        <form name="forget_form" class="needs-validation" novalidate="">
+
+                            <div class="modal_heading text-center" style="margin-bottom: 44px;">
+                                <h4>Reset password</h4>
+                            </div>
+
+                            <div class="form-floating">
+                                <input id="valid_field_forget_email" name="login_email" type="email" class="input_fields" placeholder="designer@example.com" required="">
+                                <label>Email</label>
+                                <span id="valid_icon_forget_email" class="valid_icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 14 14" fill="none"><path d="M1 8.99935L5.19608 12.3327L13 1.66602" stroke="#00A656" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+                                </span>
+                            </div>
+
+                            <button class="btn Submit_Button" type="submit">Check your inbox</button>
+
+                            <div class="account_create text-center">
+                                <span>Have your password?</span>
+                                <a href="#"data-bs-dismiss="modal" data-bs-toggle="modal" data-bs-target="#Sign_in_Modal">Login</a>
+                            </div>
+
+                        </form>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+
+<script>
+
+  const allFields = document.querySelectorAll('[id^="valid_field"]');
+
+  allFields.forEach(function(inputField) {
+    const suffix = inputField.id.replace("valid_field", "");
+    const icon = document.getElementById("valid_icon" + suffix);
+
+    inputField.addEventListener("input", function () {
+        if (inputField.value.trim() !== "") {
+            icon.style.display = "inline-block";
+        } else {
+            icon.style.display = "none";
+        }
+    });
+
+  });
+
+</script>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function () {
+        const theme = localStorage.getItem("theme");
+        if (theme === "dark") {
+            document.body.classList.add("Dark_Mode");
+        }
+    });
+
+    function toggleTheme() {
+        document.body.classList.toggle("Dark_Mode");
+
+        if (document.body.classList.contains("Dark_Mode")) {
+            localStorage.setItem("theme", "dark");
+        } else {
+            localStorage.setItem("theme", "light");
+        }
+    }
+</script>
+
+    <script src="assets/js/bootstrap.min.js"></script>
+
+</body>
+</html>
